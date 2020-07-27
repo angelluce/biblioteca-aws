@@ -1,0 +1,40 @@
+<div class="background">
+    <!--HEADER-->
+    <nav class="navbar navbar-dark bg-dark nav-horizontal">
+        <a class="navbar-brand">
+            <img src="https://images.vexels.com/media/users/3/157272/isolated/preview/e6d8b2a22f0f860af01343af96e94a8a-libros-apilados-vector-by-vexels.png" width="30" height="30" class="d-inline-block align-top" alt=""> Biblioteca
+        </a>
+        <form class="form-inline my-2 my-lg-0">
+            <!--<input class="form-control mr-sm-2" type="search">-->
+            <button class="btn btn-outline-success" type="submit" (click)=" showUploadForm()">Subir</button>
+        </form>
+    </nav>
+    <!--HEADER-->
+
+    <!--UPLOAD FORM-->
+    <form *ngIf="upLoadBoolean">
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Example file input</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+    </form>
+    <!--UPLOAD FORM-->
+
+    <!--CARDS-->
+    <div class="cards">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header">
+                    <h5 class="card-title">{{titleBook}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{autorBook}}</h6>
+                </div>
+                <div class="card-text">
+                    <p class="card-text">{{summaryBook}}</p>
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-outline-success btn-download" type="submit" (click)="downloadBook()">Descargar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--CARDS-->
